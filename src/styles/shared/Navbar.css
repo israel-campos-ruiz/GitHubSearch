@@ -1,0 +1,24 @@
+
+.nav__dark{
+    background-color: #1D2029;
+    
+    
+}
+.nav__light{
+    background-color: #FFFFFF;
+    
+}
+
+
+.nav-color{
+    color: var(--baseColor) !important
+}
+.nav__logo{
+    width: 80px;
+    object-fit: contain;
+}
+
+
+.space{
+    margin-right: 30px;
+}

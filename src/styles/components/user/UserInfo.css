@@ -1,0 +1,38 @@
+.card-user{
+    background: var(--card-bg);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.card-user:before{
+    content: "";
+    height: 4px;
+    display: block;
+    background-color: var(--info-card-top);
+}
+
+.card-user-header{
+    padding: 8px 20px;
+}
+
+.card-user-name{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.avatar{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.card-body-user{
+    padding: 8px 20px;
+}
+
+.bio{
+    color: var(--gray);
+}

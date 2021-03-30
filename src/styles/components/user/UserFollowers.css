@@ -1,0 +1,15 @@
+.card-follower-body{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+}
+
+.height{
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.height::-webkit-scrollbar{
+    display: none;
+}

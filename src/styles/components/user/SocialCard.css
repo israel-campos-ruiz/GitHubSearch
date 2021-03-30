@@ -1,0 +1,46 @@
+
+.social-card{
+    background: var(--card-bg);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    overflow: hidden;
+}
+
+.social-card:before{
+    content: "";
+    height: 4px;
+    display: block;
+    background-color: var(--top-bg);
+}
+
+.social-icon{
+    align-items: center;
+    color: var(--icon-name);
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.social-container-numbers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-value{
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.social-label{
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.social-name{
+    margin-left: 5px;
+    color: var(--icon-name);
+}
