@@ -28,12 +28,13 @@ const RepoCharts = () => {
     languaje: chartsName[index],
   }));
   return (
-    <div className="col-lg-6 col-md-12 col-sm-12 mb-3">
+    <div className="col-lg-6 col-md-12 col-sm-12 mb-3 ">
       <div className="card-user">
         <h6 className="text-center my-3">GRÁFICOS</h6>
         {!!data && (
             <BarChart
-            width={450}
+            className="d-flex justify-center align-center"
+            width={360}
             height={400}
             data={result}
             margin={{
