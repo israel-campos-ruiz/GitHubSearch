@@ -15,6 +15,7 @@ const Navbar = ({ children }) => {
           Zebrands test
         </NavLink>
         <button
+          
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -23,7 +24,7 @@ const Navbar = ({ children }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="menu-icon">&#9776;</span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

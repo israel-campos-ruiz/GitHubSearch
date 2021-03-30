@@ -18,6 +18,14 @@
     object-fit: contain;
 }
 
+.navbar-toggler-icon{
+    color: var(--baseColor) !important
+}
+
+.menu-icon{
+    color: var(--baseColor);
+    font-size: 25px;
+}
 
 .space{
     margin-right: 30px;
