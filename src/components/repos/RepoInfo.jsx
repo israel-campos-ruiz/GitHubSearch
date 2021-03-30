@@ -1,21 +1,18 @@
-import React, { useContext } from "react";
+import React  from "react";
 import { BsBook } from "react-icons/bs";
-import { ReposContext } from "../../context/GithubReposContext";
-
-const RepoInfo = () => {
-  const { data } = useContext(ReposContext);
+const RepoInfo = ({dataRepo}) => {
   return (
     <div className="card-user">
       <div className="card-user-header">
-        <img className="avatar" src={data?.owner.avatar_url} alt="sfjsdla" />
-        <span className="card-user-name">Repositorio: {data?.name}</span>
+        <img className="avatar" src={dataRepo.owner.avatar_url} alt="sfjsdla" />
+        <span className="card-user-name">Repositorio: {dataRepo.name}</span>
       </div>
       <div className="card-body-user">
         <p className="bio">
-          <BsBook /> {data?.language}
+          <BsBook /> {dataRepo.language}
         </p>
-        <a target="_blank" rel="noreferrer" href={data?.url}>
-          {data?.url}
+        <a target="_blank" rel="noreferrer" href={dataRepo?.url}>
+          {dataRepo.url}
         </a>
       </div>
     </div>

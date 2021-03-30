@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { ReposContext } from "../../context/GithubReposContext";
+import React from "react";
 import '../../styles/components/repos/RepoInfo.css'
-const RepoContributors= () => {
-  const { contributors } = useContext(ReposContext);
+const RepoContributors= ({contributors}) => {
+
   return (
     <div className="col-lg-6 col-md-12 col-sm-12">
       <div className="card-user height">
