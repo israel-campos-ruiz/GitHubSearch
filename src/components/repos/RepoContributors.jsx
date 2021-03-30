@@ -1,7 +1,6 @@
 import React from "react";
 import '../../styles/components/repos/RepoInfo.css'
 const RepoContributors= ({contributors}) => {
-console.log(contributors);
   return (
     <div className="col-lg-6 col-md-12 col-sm-12">
       <div className="card-user height">

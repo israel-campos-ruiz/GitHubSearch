@@ -13,7 +13,6 @@ const Repos = () => {
   const { data:dataRepo, loading:loadingRepo, error:errorRepo } = useGet(
     `https://api.github.com/repos/${resContext?.searchUser}/${resContext?.searchRepos}`
   );
-    console.log(errorRepo);
   const contributors = useGet(dataRepo?.contributors_url)
   return (
     <div className="container">
