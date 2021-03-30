@@ -4,12 +4,12 @@ import { BsGeoAlt, BsBuilding } from "react-icons/bs";
 import "../../styles/components/user/UserInfo.css";
 const UserInfo = () => {
   const { data } = useContext(UserContext);
-  const { avatar_url, name, bio, location, html_url, company } = data;
+  const { avatar_url, bio, location, html_url, company, login } = data;
   return (
       <div className="card-user">
         <div className="card-user-header">
           <img className="avatar" src={avatar_url} alt="sfjsdla" />
-          <span className="card-user-name">User: {name}</span>
+          <span className="card-user-name">User: {login}</span>
         </div>
         <div className="card-body-user">
           <p className="bio">

@@ -4,9 +4,11 @@ import SocialCard from "./SocialCard";
 import { BsPeople } from "react-icons/bs";
 import UserInfo from "./UserInfo";
 import UserFollowers from "./UserFollowers";
+import useGet from "../../hooks/useGet";
 const User = () => {
   const { data } = useContext(UserContext);
   const { login, followers, following, public_gists, public_repos } = data;
+  const {data:firstFollowersLoad} = useGet(`${data?.followers_url}`);
   const items = [
     {
       id: 1,
@@ -52,7 +54,8 @@ const User = () => {
       <div className="col-lg-6 col-md-12 col-sm-12 my-3">
         <UserInfo />
       </div>
-        <UserFollowers />
+      {firstFollowersLoad && (<UserFollowers firstFollowersLoad={firstFollowersLoad}/>)}
+    
     </div>
   );
 };

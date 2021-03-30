@@ -29,11 +29,8 @@ const Repos = () => {
           <br />
         </div>
       )}
-
       {resContext?.data === null && (
-        <h2 className="mt-5 text-center">
-          Animate a buscar los repositorios de {data?.login}{" "}
-        </h2>
+       <Loader/>
       )}
     </div>
   );
