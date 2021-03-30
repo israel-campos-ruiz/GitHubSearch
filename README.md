@@ -31,7 +31,6 @@ npm install
 npm start
 ```
 
-
 ## Construir la aplicación para producción:
 ```javascript
 npm run build
