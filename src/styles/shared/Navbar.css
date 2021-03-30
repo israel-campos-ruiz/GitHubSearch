@@ -1,15 +1,11 @@
 
 .nav__dark{
-    background-color: #1D2029;
-    
-    
+    background-color: #1D2029;   
 }
 .nav__light{
     background-color: #FFFFFF;
     
 }
-
-
 .nav-color{
     color: var(--baseColor) !important
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import '../../styles/components/repos/RepoInfo.css'
 const RepoContributors= ({contributors}) => {
-
+console.log(contributors);
   return (
     <div className="col-lg-6 col-md-12 col-sm-12">
       <div className="card-user height">
         <h6 className="text-center my-3">CONTRIBUIDORES</h6>
+        {contributors?.data?.length === 0 && <h6 className="text-center my-5 bio">Sin contribuidores</h6>}
         {contributors?.data?.map(({ id, avatar_url, login, html_url }) => (
           <div key={id}>
             <div className="card-user-header">
@@ -26,6 +27,7 @@ const RepoContributors= ({contributors}) => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

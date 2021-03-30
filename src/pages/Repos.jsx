@@ -13,7 +13,7 @@ const Repos = () => {
   const { data:dataRepo, loading:loadingRepo, error:errorRepo } = useGet(
     `https://api.github.com/repos/${resContext?.searchUser}/${resContext?.searchRepos}`
   );
-
+    console.log(errorRepo);
   const contributors = useGet(dataRepo?.contributors_url)
   return (
     <div className="container">
@@ -29,16 +29,14 @@ const Repos = () => {
           {dataRepo && <RepoInfo dataRepo={dataRepo} /> }
           <div className="row my-3">
             <RepoCharts  />
-            {contributors && <RepoContributors />}
+            {contributors && <RepoContributors contributors={contributors} />}
           </div>
           <br />
         </div>
       )}
-      {dataRepo === null && (
-       <Loader/>
-      )}
+    
 
-      {errorRepo && <p>error al cargar la data</p>}
+      {errorRepo && <h4 className="text-center mt-3 bio">No encuentro ese repositorio</h4>}
     </div>
   );
 };

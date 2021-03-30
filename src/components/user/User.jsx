@@ -6,7 +6,7 @@ import UserInfo from "./UserInfo";
 import UserFollowers from "./UserFollowers";
 import useGet from "../../hooks/useGet";
 const User = () => {
-  const { data } = useContext(UserContext);
+  const { data, error } = useContext(UserContext);
   const { login, followers, following, public_gists, public_repos } = data;
   const {data:firstFollowersLoad} = useGet(`${data?.followers_url}`);
   const items = [
@@ -39,6 +39,7 @@ const User = () => {
       label: "repositorios públicos",
     },
   ];
+  
   return (
     <div className="row mt-5">
       {items.map(({ id, login, value, icon, label }) => (
@@ -55,7 +56,7 @@ const User = () => {
         <UserInfo />
       </div>
       {firstFollowersLoad && (<UserFollowers firstFollowersLoad={firstFollowersLoad}/>)}
-    
+      {error && <h5 className="text-center bio">Error en la busqueda</h5>}
     </div>
   );
 };
