@@ -3,6 +3,6 @@ export const average =  (props) => {
     
     const sum = Object.entries(props).map(([name, value]) =>  total += value)
     const totalSum = sum[sum.length-1];
-    const promedio = Object.entries(props).map(([name,value])=> value = (value *100) / totalSum);
-    return promedio
+    const averageChart = Object.entries(props).map(([name,value])=> value = (value *100) / totalSum);
+    return averageChart
 }
