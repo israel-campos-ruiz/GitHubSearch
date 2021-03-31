@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in the component  <SwitchTheme/> shold be render a component 1`] = `
+<div
+  className="dark-mode"
+>
+  <input
+    className="checkbox"
+    id="checkbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="switch"
+    htmlFor="checkbox"
+  />
+</div>
+`;

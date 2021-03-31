@@ -4,8 +4,8 @@ import "../../styles/shared/SwitchTheme.css"
 const SwitchTheme = ({ checked, setDarkMode, setChecked }) => {
   const ref = useRef(null);
   const handleChange = () => {
-    setChecked(ref.current.checked);
-    setDarkMode(ref.current.checked);
+    setChecked(ref?.current?.checked);
+    setDarkMode(ref?.current?.checked);
   };
 
   return (
